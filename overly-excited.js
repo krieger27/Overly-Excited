@@ -1,14 +1,25 @@
-var sentence =["I ", "Love ", "Chickfila ", "so ", "much."]
+var sentence =["I ", "Love ", "Chickfila ", "so ", "much", "I", "could", "eat", "it", "every", "day."]
 
 var newOne ="";
 
- function addExcitement (theWordArray) {
-    for (i=0; i<theWordArray.length; i++){
+ function addExcitement (newOne) {
+    for (let i=0; i < sentence.length; i++){
         newOne += "";
         newOne += sentence[i];
+        if ((i+1) % 3===0) {
+            newOne += "!";
+        }
+        if ((i+1) % 6 ===0){
+            newOne += "!";
+        }
+        if ((i+1) % 9 ===0){
+            newOne += "!!";
+        }
+        if ((i+1) %12 ===0){
+            newOne+= "!!";
+        }
+        console.log(newOne);
     }
-    console.log(newOne);
  }
-     
- 
- addExcitement(sentence)
+   
+ addExcitement(newOne);
